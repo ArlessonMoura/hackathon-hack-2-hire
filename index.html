@@ -1,0 +1,1025 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Solução Enterprise de Intelligent Document Processing com Amazon Bedrock. Processamento automático de documentos com IA Generativa e arquitetura serverless escalável."
+    />
+    <meta
+      name="keywords"
+      content="IDP, Intelligent Document Processing, Amazon Bedrock, AWS, Serverless, IA Generativa, OCR, Classificação de Documentos"
+    />
+    <meta name="author" content="Hackathon AWS Team" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="IDP Enterprise - Intelligent Document Processing com Amazon Bedrock"
+    />
+    <meta
+      property="og:description"
+      content="Solução serverless de processamento inteligente de documentos com IA Generativa"
+    />
+    <meta property="og:type" content="website" />
+
+    <title>IDP Enterprise | Intelligent Document Processing com Amazon Bedrock</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./app/css/variables.css" />
+    <link rel="stylesheet" href="./app/css/reset.css" />
+    <link rel="stylesheet" href="./app/css/layout.css" />
+    <link rel="stylesheet" href="./app/css/components.css" />
+    <link rel="stylesheet" href="./app/css/sections.css" />
+    <link rel="stylesheet" href="./app/css/animations.css" />
+    <link rel="stylesheet" href="./app/css/responsive.css" />
+
+    <!-- External Libraries -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="nav" role="navigation" aria-label="Navegação principal">
+      <div class="container nav__container">
+        <a href="#" class="nav__logo" aria-label="IDP Enterprise">
+          <i data-lucide="zap" class="icon"></i>
+          IDP Enterprise
+        </a>
+        <button class="nav__toggle" aria-label="Abrir menu" aria-expanded="false">
+          <i data-lucide="menu" class="icon"></i>
+        </button>
+        <ul class="nav__menu">
+          <li><a href="#problema" class="nav__link">Problema</a></li>
+          <li><a href="#solucao" class="nav__link">Solução</a></li>
+          <li><a href="#pipeline" class="nav__link">Pipeline</a></li>
+          <li><a href="#arquitetura" class="nav__link">Arquitetura</a></li>
+          <li><a href="#servicos" class="nav__link">Serviços</a></li>
+          <li><a href="#diferenciais" class="nav__link">Diferenciais</a></li>
+          <li><a href="#finops" class="nav__link">FinOps</a></li>
+          <li><a href="#seguranca" class="nav__link">Segurança</a></li>
+          <li><a href="#resultados" class="nav__link">Resultados</a></li>
+          <li><a href="#equipe" class="nav__link">Equipe</a></li>
+          <li><a href="#contato" class="nav__cta">Fale Conosco</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero__background"></div>
+      <div class="hero__grid"></div>
+      <div class="hero__glow hero__glow--1"></div>
+      <div class="hero__glow hero__glow--2"></div>
+      <div class="hero__particles" id="particles"></div>
+
+      <div class="container hero__content">
+        <div class="hero__badge">
+          <span class="badge badge--primary">Powered by Amazon Bedrock</span>
+        </div>
+        <h1 class="hero__title">
+          Transforme Documentos em<br />
+          <span>Dados Estruturados</span>
+        </h1>
+        <p class="hero__subtitle">
+          Solução Enterprise de Intelligent Document Processing com IA Generativa.
+          Classificação automática, extração inteligente e estruturação confiável em
+          escala.
+        </p>
+        <div class="hero__ctas">
+          <a href="#solucao" class="btn btn--primary btn--large">
+            <i data-lucide="rocket" class="icon"></i>
+            Conhecer a Solução
+          </a>
+          <a href="#arquitetura" class="btn btn--secondary btn--large">
+            <i data-lucide="architecture" class="icon"></i>
+            Ver Arquitetura
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="problema" class="section problem" aria-labelledby="problem-title">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="badge badge--primary section-header__badge">O Desafio</span>
+          <h2 id="problem-title" class="section-header__title">
+            O Custo do Processamento Manual
+          </h2>
+          <p class="section-header__subtitle">
+            Empresas perdem milhões anualmente com processos manuais de documentação. O
+            gargalo humano limita crescimento, gera erros e compromete a experiência do
+            cliente.
+          </p>
+        </div>
+
+        <div class="problem__grid">
+          <div class="problem__card" data-aos="fade-up" data-aos-delay="100">
+            <div class="problem__icon">
+              <i data-lucide="trending-down" class="icon icon--lg"></i>
+            </div>
+            <h3 class="problem__title">Perda de Receita</h3>
+            <p class="problem__description">
+              Clientes desistem durante a espera. Processos lentos significam
+              oportunidades perdidas e conversão reduzida em até 40%.
+            </p>
+          </div>
+
+          <div class="problem__card" data-aos="fade-up" data-aos-delay="200">
+            <div class="problem__icon">
+              <i data-lucide="dollar-sign" class="icon icon--lg"></i>
+            </div>
+            <h3 class="problem__title">Custo Operacional</h3>
+            <p class="problem__description">
+              Equipes grandes dedicadas apenas à digitação manual. Despesas fixas que não
+              escalam com o volume de negócios.
+            </p>
+          </div>
+
+          <div class="problem__card" data-aos="fade-up" data-aos-delay="300">
+            <div class="problem__icon">
+              <i data-lucide="alert-triangle" class="icon icon--lg"></i>
+            </div>
+            <h3 class="problem__title">Erros e Retrabalho</h3>
+            <p class="problem__description">
+              CPF incorreto, endereço incompleto, valor errado. Cada erro gera
+              reprocessamento, custos adicionais e insatisfação.
+            </p>
+          </div>
+
+          <div class="problem__card" data-aos="fade-up" data-aos-delay="400">
+            <div class="problem__icon">
+              <i data-lucide="bar-chart-2" class="icon icon--lg"></i>
+            </div>
+            <h3 class="problem__title">Sem Escalabilidade</h3>
+            <p class="problem__description">
+              Em campanhas promocionais ou datas de pico, o gargalo é humano. Não é
+              possível crescer sem aumentar proporcionalmente a equipe.
+            </p>
+          </div>
+
+          <div class="problem__card" data-aos="fade-up" data-aos-delay="500">
+            <div class="problem__icon">
+              <i data-lucide="shield-alert" class="icon icon--lg"></i>
+            </div>
+            <h3 class="problem__title">Risco Regulatório</h3>
+            <p class="problem__description">
+              Erros em dados de clientes podem gerar problemas de compliance. Multas e
+              sanções por inconsistências em informações sensíveis.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="solucao" class="section" aria-labelledby="solution-title">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="badge badge--success section-header__badge">Nossa Solução</span>
+          <h2 id="solution-title" class="section-header__title">
+            Intelligent Document Processing
+          </h2>
+          <p class="section-header__subtitle">
+            Arquitetura serverless construída inteiramente sobre AWS. Processamento
+            orientado a eventos, escalabilidade automática e IA Generativa para
+            transformar documentos em dados estruturados.
+          </p>
+        </div>
+
+        <div class="solution__cards">
+          <div class="solution__card" data-aos="fade-up" data-aos-delay="100">
+            <div class="card__icon">
+              <i data-lucide="upload-cloud" class="icon icon--lg"></i>
+            </div>
+            <h3 class="card__title">Upload Simplificado</h3>
+            <p class="card__description">
+              Cliente envia pacote de documentos via API Gateway. URL pré-assinada garante
+              upload seguro direto para Amazon S3.
+            </p>
+          </div>
+
+          <div class="solution__card" data-aos="fade-up" data-aos-delay="200">
+            <div class="card__icon">
+              <i data-lucide="brain-circuit" class="icon icon--lg"></i>
+            </div>
+            <h3 class="card__title">Classificação Automática</h3>
+            <p class="card__description">
+              Amazon Bedrock Data Automation identifica automaticamente cada tipo de
+              documento: identidade, comprovantes, extratos, documentação imobiliária.
+            </p>
+          </div>
+
+          <div class="solution__card" data-aos="fade-up" data-aos-delay="300">
+            <div class="card__icon">
+              <i data-lucide="extract" class="icon icon--lg"></i>
+            </div>
+            <h3 class="card__title">Extração Inteligente</h3>
+            <p class="card__description">
+              OCR avançado combinado com IA Generativa extrai dados relevantes de cada
+              documento com precisão superior a processos manuais.
+            </p>
+          </div>
+
+          <div
+            class="solution__card solution__card--highlight"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div class="card__icon">
+              <i data-lucide="sparkles" class="icon icon--lg"></i>
+            </div>
+            <h3 class="card__title">Estruturação com Amazon Nova</h3>
+            <p class="card__description">
+              Amazon Nova com tool calling gera JSON estruturado e padronizado. Dados
+              consistentes, validados e prontos para integração.
+            </p>
+          </div>
+
+          <div class="solution__card" data-aos="fade-up" data-aos-delay="500">
+            <div class="card__icon">
+              <i data-lucide="database" class="icon icon--lg"></i>
+            </div>
+            <h3 class="card__title">Persistência Confiável</h3>
+            <p class="card__description">
+              Amazon DynamoDB armazena resultados estruturados. Alta disponibilidade,
+              baixa latência e escalabilidade automática garantida.
+            </p>
+          </div>
+
+          <div class="solution__card" data-aos="fade-up" data-aos-delay="600">
+            <div class="card__icon">
+              <i data-lucide="zap" class="icon icon--lg"></i>
+            </div>
+            <h3 class="card__title">Processamento em Paralelo</h3>
+            <p class="card__description">
+              Cada documento é processado independentemente. Lambda orquestradora coordena
+              execução paralela para máxima performance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pipeline Section -->
+    <section id="pipeline" class="section pipeline" aria-labelledby="pipeline-title">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="badge badge--secondary section-header__badge">Pipeline</span>
+          <h2 id="pipeline-title" class="section-header__title">
+            Fluxo de Processamento
+          </h2>
+          <p class="section-header__subtitle">
+            Acompanhe o journey de um documento atravessando toda a arquitetura. Cada
+            etapa é otimizada para performance, confiabilidade e escalabilidade.
+          </p>
+        </div>
+
+        <div class="pipeline__timeline">
+          <div class="pipeline__line"></div>
+
+          <div class="pipeline__steps">
+            <div class="pipeline__step" data-aos="fade-left" data-aos-delay="100">
+              <div class="pipeline__node">
+                <i data-lucide="user" class="icon icon--lg"></i>
+              </div>
+              <div class="pipeline__content">
+                <h3 class="pipeline__title">Cliente Inicia Solicitação</h3>
+                <p class="pipeline__description">
+                  Pacote de 5-8 documentos em PDF enviado através da aplicação.
+                </p>
+              </div>
+            </div>
+
+            <div class="pipeline__step" data-aos="fade-right" data-aos-delay="200">
+              <div class="pipeline__node">
+                <i data-lucide="shield-check" class="icon icon--lg"></i>
+              </div>
+              <div class="pipeline__content">
+                <h3 class="pipeline__title">API Gateway</h3>
+                <p class="pipeline__description">
+                  Endpoint seguro com autenticação. Gera URL pré-assinada para upload
+                  direto ao S3.
+                </p>
+              </div>
+            </div>
+
+            <div class="pipeline__step" data-aos="fade-left" data-aos-delay="300">
+              <div class="pipeline__node">
+                <i data-lucide="upload" class="icon icon--lg"></i>
+              </div>
+              <div class="pipeline__content">
+                <h3 class="pipeline__title">Upload para S3</h3>
+                <p class="pipeline__description">
+                  Arquivo ZIP enviado diretamente para bucket S3. Criptografia em repouso
+                  habilitada.
+                </p>
+              </div>
+            </div>
+
+            <div class="pipeline__step" data-aos="fade-right" data-aos-delay="400">
+              <div class="pipeline__node">
+                <i data-lucide="lightning" class="icon icon--lg"></i>
+              </div>
+              <div class="pipeline__content">
+                <h3 class="pipeline__title">EventBridge Trigger</h3>
+                <p class="pipeline__description">
+                  Evento de upload dispara Lambda orquestradora automaticamente.
+                </p>
+              </div>
+            </div>
+
+            <div class="pipeline__step" data-aos="fade-left" data-aos-delay="500">
+              <div class="pipeline__node">
+                <i data-lucide="file-archive" class="icon icon--lg"></i>
+              </div>
+              <div class="pipeline__content">
+                <h3 class="pipeline__title">Lambda de Descompactação</h3>
+                <p class="pipeline__description">
+                  ZIP é descompactado. Cada documento é processado em paralelo.
+                </p>
+              </div>
+            </div>
+
+            <div class="pipeline__step" data-aos="fade-right" data-aos-delay="600">
+              <div class="pipeline__node">
+                <i data-lucide="brain" class="icon icon--lg"></i>
+              </div>
+              <div class="pipeline__content">
+                <h3 class="pipeline__title">Bedrock Data Automation</h3>
+                <p class="pipeline__description">
+                  Classificação automática e extração de dados com IA Generativa.
+                </p>
+              </div>
+            </div>
+
+            <div class="pipeline__step" data-aos="fade-left" data-aos-delay="700">
+              <div class="pipeline__node">
+                <i data-lucide="sparkles" class="icon icon--lg"></i>
+              </div>
+              <div class="pipeline__content">
+                <h3 class="pipeline__title">Amazon Nova</h3>
+                <p class="pipeline__description">
+                  Tool calling estrutura dados em JSON padronizado e validado.
+                </p>
+              </div>
+            </div>
+
+            <div class="pipeline__step" data-aos="fade-right" data-aos-delay="800">
+              <div class="pipeline__node">
+                <i data-lucide="layers" class="icon icon--lg"></i>
+              </div>
+              <div class="pipeline__content">
+                <h3 class="pipeline__title">Lambda Consolidator</h3>
+                <p class="pipeline__description">
+                  Resultados de todos os documentos são consolidados em um JSON único.
+                </p>
+              </div>
+            </div>
+
+            <div class="pipeline__step" data-aos="fade-left" data-aos-delay="900">
+              <div class="pipeline__node">
+                <i data-lucide="database" class="icon icon--lg"></i>
+              </div>
+              <div class="pipeline__content">
+                <h3 class="pipeline__title">DynamoDB</h3>
+                <p class="pipeline__description">
+                  JSON estruturado persistido. Disponível imediatamente para consulta.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Architecture Section -->
+    <section
+      id="arquitetura"
+      class="section architecture"
+      aria-labelledby="architecture-title"
+    >
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="badge badge--primary section-header__badge">Arquitetura</span>
+          <h2 id="architecture-title" class="section-header__title">
+            Arquitetura Serverless
+          </h2>
+          <p class="section-header__subtitle">
+            Design orientado a eventos, sem servidores provisionados. Escala
+            automaticamente, paga apenas pelo uso e garante alta disponibilidade.
+          </p>
+        </div>
+
+        <div class="architecture__container" data-aos="fade-up">
+          <div class="architecture__image-wrapper" id="architectureImage">
+            <img
+              src="../doc/architecture.png"
+              alt="Diagrama de arquitetura IDP com AWS"
+              class="architecture__image"
+            />
+            <div class="architecture__zoom-hint">
+              <i data-lucide="search-plus" class="icon icon--sm"></i>
+              Clique para expandir
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicos" class="section services" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="badge badge--secondary section-header__badge">Serviços AWS</span>
+          <h2 id="services-title" class="section-header__title">Stack Tecnológica</h2>
+          <p class="section-header__subtitle">
+            Serviços nativos AWS escolhidos por sua maturidade, escalabilidade e
+            integração perfeita. Cada componente tem um propósito específico na
+            arquitetura.
+          </p>
+        </div>
+
+        <div class="services__grid">
+          <div class="services__card" data-aos="fade-up" data-aos-delay="100">
+            <div class="services__icon">
+              <i data-lucide="shield-check" class="icon icon--xl"></i>
+            </div>
+            <h3 class="services__name">API Gateway</h3>
+            <p class="services__description">
+              Endpoint seguro e escalável. Gerencia autenticação, rate limiting e
+              roteamento para Lambda com zero infraestrutura.
+            </p>
+          </div>
+
+          <div class="services__card" data-aos="fade-up" data-aos-delay="200">
+            <div class="services__icon">
+              <i data-lucide="zap" class="icon icon--xl"></i>
+            </div>
+            <h3 class="services__name">Lambda</h3>
+            <p class="services__description">
+              Compute serverless. Executa orquestração, descompactação e consolidação.
+              Paga por milissegundo de execução.
+            </p>
+          </div>
+
+          <div class="services__card" data-aos="fade-up" data-aos-delay="300">
+            <div class="services__icon">
+              <i data-lucide="hard-drive" class="icon icon--xl"></i>
+            </div>
+            <h3 class="services__name">Amazon S3</h3>
+            <p class="services__description">
+              Armazenamento de objetos. Escala infinita, 99.999999999% de durabilidade.
+              Criptografia SSE habilitada por padrão.
+            </p>
+          </div>
+
+          <div class="services__card" data-aos="fade-up" data-aos-delay="400">
+            <div class="services__icon">
+              <i data-lucide="git-branch" class="icon icon--xl"></i>
+            </div>
+            <h3 class="services__name">EventBridge</h3>
+            <p class="services__description">
+              Barramento de eventos serverless. Dispara Lambdas baseado em eventos S3.
+              Desacoplamento completo entre componentes.
+            </p>
+          </div>
+
+          <div class="services__card" data-aos="fade-up" data-aos-delay="500">
+            <div class="services__icon">
+              <i data-lucide="brain-circuit" class="icon icon--xl"></i>
+            </div>
+            <h3 class="services__name">Bedrock Data Automation</h3>
+            <p class="services__description">
+              Classificação e extração de documentos com IA. Blueprint pré-treinado para
+              documentos financeiros e de identidade.
+            </p>
+          </div>
+
+          <div class="services__card" data-aos="fade-up" data-aos-delay="600">
+            <div class="services__icon">
+              <i data-lucide="sparkles" class="icon icon--xl"></i>
+            </div>
+            <h3 class="services__name">Amazon Nova</h3>
+            <p class="services__description">
+              Modelo LLM de última geração. Tool calling garante JSON estruturado e
+              validado sem parsing manual.
+            </p>
+          </div>
+
+          <div class="services__card" data-aos="fade-up" data-aos-delay="700">
+            <div class="services__icon">
+              <i data-lucide="database" class="icon icon--xl"></i>
+            </div>
+            <h3 class="services__name">DynamoDB</h3>
+            <p class="services__description">
+              NoSQL serverless. Baixa latência, escalabilidade automática. Persiste JSON
+              estruturado com alta disponibilidade.
+            </p>
+          </div>
+
+          <div class="services__card" data-aos="fade-up" data-aos-delay="800">
+            <div class="services__icon">
+              <i data-lucide="activity" class="icon icon--xl"></i>
+            </div>
+            <h3 class="services__name">CloudWatch</h3>
+            <p class="services__description">
+              Observabilidade completa. Métricas, logs e alarms. Monitoramento proativo e
+              debugging eficiente.
+            </p>
+          </div>
+
+          <div class="services__card" data-aos="fade-up" data-aos-delay="900">
+            <div class="services__icon">
+              <i data-lucide="lock" class="icon icon--xl"></i>
+            </div>
+            <h3 class="services__name">IAM</h3>
+            <p class="services__description">
+              Gestão de identidades. Least privilege por padrão. Cada Lambda tem
+              permissões mínimas necessárias.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Differentials Section -->
+    <section id="diferenciais" class="section" aria-labelledby="differentials-title">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="badge badge--success section-header__badge">Diferenciais</span>
+          <h2 id="differentials-title" class="section-header__title">
+            Por Que Esta Arquitetura?
+          </h2>
+          <p class="section-header__subtitle">
+            Princípios de cloud-native aplicados em cada decisão. Serverless, event-driven
+            e pay-per-use para máxima eficiência e inovação.
+          </p>
+        </div>
+
+        <div class="differentials__grid">
+          <div class="differential__card" data-aos="fade-up" data-aos-delay="100">
+            <div class="differential__icon">
+              <i data-lucide="server" class="icon icon--lg"></i>
+            </div>
+            <div class="differential__content">
+              <h3>Serverless</h3>
+              <p>
+                Zero servidores para gerenciar. AWS provisiona infraestrutura
+                automaticamente. Foco 100% em código de negócio.
+              </p>
+            </div>
+          </div>
+
+          <div class="differential__card" data-aos="fade-up" data-aos-delay="200">
+            <div class="differential__icon">
+              <i data-lucide="git-branch" class="icon icon--lg"></i>
+            </div>
+            <div class="differential__content">
+              <h3>Event Driven</h3>
+              <p>
+                Arquitetura orientada a eventos. Componentes desacoplados respondem a
+                triggers. Alta resiliência e flexibilidade.
+              </p>
+            </div>
+          </div>
+
+          <div class="differential__card" data-aos="fade-up" data-aos-delay="300">
+            <div class="differential__icon">
+              <i data-lucide="credit-card" class="icon icon--lg"></i>
+            </div>
+            <div class="differential__content">
+              <h3>Pay Per Use</h3>
+              <p>
+                Paga apenas pelo que usa. Sem custos fixos. Economia de até 90% comparado
+                a infraestrutura provisionada.
+              </p>
+            </div>
+          </div>
+
+          <div class="differential__card" data-aos="fade-up" data-aos-delay="400">
+            <div class="differential__icon">
+              <i data-lucide="scale" class="icon icon--lg"></i>
+            </div>
+            <div class="differential__content">
+              <h3>Scale to Zero</h3>
+              <p>
+                Infraestrutura desaparece quando não em uso. Zero custo quando idle.
+                Escala instantaneamente sob demanda.
+              </p>
+            </div>
+          </div>
+
+          <div class="differential__card" data-aos="fade-up" data-aos-delay="500">
+            <div class="differential__icon">
+              <i data-lucide="brain" class="icon icon--lg"></i>
+            </div>
+            <div class="differential__content">
+              <h3>IA Generativa</h3>
+              <p>
+                Amazon Bedrock com modelos de última geração. Classificação e extração com
+                precisão superior a OCR tradicional.
+              </p>
+            </div>
+          </div>
+
+          <div class="differential__card" data-aos="fade-up" data-aos-delay="600">
+            <div class="differential__icon">
+              <i data-lucide="shield-check" class="icon icon--lg"></i>
+            </div>
+            <div class="differential__content">
+              <h3>Alta Disponibilidade</h3>
+              <p>
+                Múltiplas AZs por padrão. 99.99% SLA em serviços críticos. Failover
+                automático sem intervenção manual.
+              </p>
+            </div>
+          </div>
+
+          <div class="differential__card" data-aos="fade-up" data-aos-delay="700">
+            <div class="differential__icon">
+              <i data-lucide="eye" class="icon icon--lg"></i>
+            </div>
+            <div class="differential__content">
+              <h3>Observabilidade</h3>
+              <p>
+                CloudWatch para métricas e logs. X-Ray para tracing. Visibilidade completa
+                de cada execução.
+              </p>
+            </div>
+          </div>
+
+          <div class="differential__card" data-aos="fade-up" data-aos-delay="800">
+            <div class="differential__icon">
+              <i data-lucide="lock" class="icon icon--lg"></i>
+            </div>
+            <div class="differential__content">
+              <h3>Segurança</h3>
+              <p>
+                IAM com least privilege. KMS para criptografia. VPC endpoints para tráfego
+                privado. Security by design.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FinOps Section -->
+    <section id="finops" class="section finops" aria-labelledby="finops-title">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="badge badge--primary section-header__badge">FinOps</span>
+          <h2 id="finops-title" class="section-header__title">Eficiência Financeira</h2>
+          <p class="section-header__subtitle">
+            Infraestrutura praticamente desaparece quando comparada ao custo do
+            processamento de IA. Previsibilidade financeira através de arquitetura
+            pay-per-use.
+          </p>
+        </div>
+
+        <div class="finops__content">
+          <div class="finops__chart" data-aos="fade-right">
+            <canvas id="finopsChart"></canvas>
+          </div>
+
+          <div class="finops__info" data-aos="fade-left">
+            <div class="finops__metric">
+              <div class="finops__metric-icon">
+                <i data-lucide="trending-down" class="icon icon--lg"></i>
+              </div>
+              <div class="finops__metric-content">
+                <h3>&lt; 5%</h3>
+                <p>Custo de infraestrutura vs. processamento de IA</p>
+              </div>
+            </div>
+
+            <div class="finops__metric">
+              <div class="finops__metric-icon">
+                <i data-lucide="calendar-check" class="icon icon--lg"></i>
+              </div>
+              <div class="finops__metric-content">
+                <h3>Previsível</h3>
+                <p>Custo por documento conhecido antecipadamente</p>
+              </div>
+            </div>
+
+            <div class="finops__metric">
+              <div class="finops__metric-icon">
+                <i data-lucide="arrow-up-right" class="icon icon--lg"></i>
+              </div>
+              <div class="finops__metric-content">
+                <h3>Elástico</h3>
+                <p>Escala com demanda sem provisionamento excessivo</p>
+              </div>
+            </div>
+
+            <div class="finops__metric">
+              <div class="finops__metric-icon">
+                <i data-lucide="piggy-bank" class="icon icon--lg"></i>
+              </div>
+              <div class="finops__metric-content">
+                <h3>90%+</h3>
+                <p>Economia vs. infraestrutura tradicional</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Security Section -->
+    <section id="seguranca" class="section" aria-labelledby="security-title">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="badge badge--secondary section-header__badge">Segurança</span>
+          <h2 id="security-title" class="section-header__title">Security by Design</h2>
+          <p class="section-header__subtitle">
+            Múltiplas camadas de segurança implementadas. Princípios de least privilege,
+            criptografia em repouso e em trânsito, auditoria completa.
+          </p>
+        </div>
+
+        <div class="security__grid">
+          <div class="security__item" data-aos="fade-up" data-aos-delay="100">
+            <div class="security__icon">
+              <i data-lucide="users" class="icon icon--lg"></i>
+            </div>
+            <h3 class="security__name">IAM</h3>
+          </div>
+
+          <div class="security__item" data-aos="fade-up" data-aos-delay="200">
+            <div class="security__icon">
+              <i data-lucide="shield" class="icon icon--lg"></i>
+            </div>
+            <h3 class="security__name">Least Privilege</h3>
+          </div>
+
+          <div class="security__item" data-aos="fade-up" data-aos-delay="300">
+            <div class="security__icon">
+              <i data-lucide="key" class="icon icon--lg"></i>
+            </div>
+            <h3 class="security__name">KMS</h3>
+          </div>
+
+          <div class="security__item" data-aos="fade-up" data-aos-delay="400">
+            <div class="security__icon">
+              <i data-lucide="lock" class="icon icon--lg"></i>
+            </div>
+            <h3 class="security__name">SSE</h3>
+          </div>
+
+          <div class="security__item" data-aos="fade-up" data-aos-delay="500">
+            <div class="security__icon">
+              <i data-lucide="activity" class="icon icon--lg"></i>
+            </div>
+            <h3 class="security__name">CloudWatch</h3>
+          </div>
+
+          <div class="security__item" data-aos="fade-up" data-aos-delay="600">
+            <div class="security__icon">
+              <i data-lucide="inbox" class="icon icon--lg"></i>
+            </div>
+            <h3 class="security__name">DLQ</h3>
+          </div>
+
+          <div class="security__item" data-aos="fade-up" data-aos-delay="700">
+            <div class="security__icon">
+              <i data-lucide="file-text" class="icon icon--lg"></i>
+            </div>
+            <h3 class="security__name">Auditoria</h3>
+          </div>
+
+          <div class="security__item" data-aos="fade-up" data-aos-delay="800">
+            <div class="security__icon">
+              <i data-lucide="shield-check" class="icon icon--lg"></i>
+            </div>
+            <h3 class="security__name">VPC</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scalability Section -->
+    <section
+      id="escalabilidade"
+      class="section scalability"
+      aria-labelledby="scalability-title"
+    >
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="badge badge--success section-header__badge">Escalabilidade</span>
+          <h2 id="scalability-title" class="section-header__title">
+            Crescimento Automático
+          </h2>
+          <p class="section-header__subtitle">
+            Arquitetura que escala horizontalmente sem intervenção manual. De 1 a 1 milhão
+            de documentos, a mesma infraestrutura.
+          </p>
+        </div>
+
+        <div class="scalability__visual" data-aos="fade-up">
+          <div class="scalability__chart">
+            <canvas id="scalabilityChart"></canvas>
+          </div>
+          <div class="scalability__indicators">
+            <div class="scalability__indicator">Escala sob demanda</div>
+            <div class="scalability__indicator">Provisionamento automático</div>
+            <div class="scalability__indicator">Sem limites fixos</div>
+            <div class="scalability__indicator">Performance consistente</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="resultados" class="section results" aria-labelledby="results-title">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="badge badge--primary section-header__badge">Resultados</span>
+          <h2 id="results-title" class="section-header__title">Impacto Mensurável</h2>
+          <p class="section-header__subtitle">
+            Métricas que demonstram o valor da transformação digital. Processamento manual
+            vs. automação inteligente.
+          </p>
+        </div>
+
+        <div class="results__counters">
+          <div class="results__counter" data-aos="fade-up" data-aos-delay="100">
+            <div class="results__number" data-target="95">0</div>
+            <div class="results__label">% Redução de tempo</div>
+          </div>
+
+          <div class="results__counter" data-aos="fade-up" data-aos-delay="200">
+            <div class="results__number" data-target="99">0</div>
+            <div class="results__label">% Precisão de extração</div>
+          </div>
+
+          <div class="results__counter" data-aos="fade-up" data-aos-delay="300">
+            <div class="results__number" data-target="90">0</div>
+            <div class="results__label">% Redução de custos</div>
+          </div>
+
+          <div class="results__counter" data-aos="fade-up" data-aos-delay="400">
+            <div class="results__number" data-target="1000">0</div>
+            <div class="results__label">x Escalabilidade</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="equipe" class="section team" aria-labelledby="team-title">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="badge badge--secondary section-header__badge">Equipe</span>
+          <h2 id="team-title" class="section-header__title">Quem Construiu</h2>
+          <p class="section-header__subtitle">
+            Time multidisciplinar de especialistas em AWS, arquitetura serverless e
+            inteligência artificial. Hackathon AWS.
+          </p>
+        </div>
+
+        <div class="team__grid">
+          <div class="team__card" data-aos="fade-up" data-aos-delay="100">
+            <div class="team__avatar">TM</div>
+            <h3 class="team__name">Team Member 1</h3>
+            <p class="team__role">AWS Solutions Architect</p>
+            <p class="team__bio">
+              Especialista em arquiteturas serverless e event-driven. Design da solução e
+              escolha de serviços AWS.
+            </p>
+          </div>
+
+          <div class="team__card" data-aos="fade-up" data-aos-delay="200">
+            <div class="team__avatar">TM</div>
+            <h3 class="team__name">Team Member 2</h3>
+            <p class="team__role">Cloud Engineer</p>
+            <p class="team__bio">
+              Implementação de Lambda, EventBridge e orquestração. Pipeline de CI/CD e
+              IaC.
+            </p>
+          </div>
+
+          <div class="team__card" data-aos="fade-up" data-aos-delay="300">
+            <div class="team__avatar">TM</div>
+            <h3 class="team__name">Team Member 3</h3>
+            <p class="team__role">ML Engineer</p>
+            <p class="team__bio">
+              Configuração do Bedrock Data Automation e Amazon Nova. Schema JSON e
+              validação de dados.
+            </p>
+          </div>
+
+          <div class="team__card" data-aos="fade-up" data-aos-delay="400">
+            <div class="team__avatar">TM</div>
+            <h3 class="team__name">Team Member 4</h3>
+            <p class="team__role">Full Stack Developer</p>
+            <p class="team__bio">
+              Front-end e integração com API. Experiência do usuário e visualização de
+              resultados.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contato" class="footer" role="contentinfo">
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__brand">
+            <div class="footer__logo">
+              <i data-lucide="zap" class="icon"></i>
+              IDP Enterprise
+            </div>
+            <p class="footer__description">
+              Solução Enterprise de Intelligent Document Processing construída com Amazon
+              Bedrock e arquitetura serverless.
+            </p>
+          </div>
+
+          <div class="footer__column">
+            <h4>Produto</h4>
+            <nav class="footer__links">
+              <a href="#solucao" class="footer__link">Solução</a>
+              <a href="#arquitetura" class="footer__link">Arquitetura</a>
+              <a href="#servicos" class="footer__link">Serviços</a>
+              <a href="#diferenciais" class="footer__link">Diferenciais</a>
+            </nav>
+          </div>
+
+          <div class="footer__column">
+            <h4>Empresa</h4>
+            <nav class="footer__links">
+              <a href="#equipe" class="footer__link">Equipe</a>
+              <a href="#resultados" class="footer__link">Resultados</a>
+              <a href="#" class="footer__link">Blog</a>
+              <a href="#" class="footer__link">Carreiras</a>
+            </nav>
+          </div>
+
+          <div class="footer__column">
+            <h4>Legal</h4>
+            <nav class="footer__links">
+              <a href="#" class="footer__link">Privacidade</a>
+              <a href="#" class="footer__link">Termos</a>
+              <a href="#" class="footer__link">Segurança</a>
+              <a href="#" class="footer__link">Compliance</a>
+            </nav>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <p class="footer__copyright">
+            © 2024 IDP Enterprise. Todos os direitos reservados. Desenvolvido durante
+            Hackathon AWS.
+          </p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="LinkedIn">
+              <i data-lucide="linkedin" class="icon icon--sm"></i>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="GitHub">
+              <i data-lucide="github" class="icon icon--sm"></i>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="Twitter">
+              <i data-lucide="twitter" class="icon icon--sm"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modal Template -->
+    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="modal__backdrop" id="modalBackdrop"></div>
+      <div class="modal__content">
+        <button class="modal__close" id="modalClose" aria-label="Fechar modal">
+          <i data-lucide="x" class="icon"></i>
+        </button>
+        <h2 class="modal__title" id="modalTitle"></h2>
+        <div class="modal__body" id="modalBody"></div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./app/js/app.js"></script>
+    <script src="./app/js/navigation.js"></script>
+    <script src="./app/js/counters.js"></script>
+    <script src="./app/js/charts.js"></script>
+    <script src="./app/js/particles.js"></script>
+  </body>
+</html>
