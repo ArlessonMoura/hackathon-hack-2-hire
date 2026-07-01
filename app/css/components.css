@@ -139,8 +139,9 @@
 /* Section Header */
 .section-header {
   text-align: center;
-  max-width: 800px;
+  max-width: min(800px, 100%);
   margin: 0 auto var(--spacing-3xl);
+  padding: 0 clamp(0.5rem, 2vw, 1.5rem);
 }
 
 .section-header__badge {
@@ -148,16 +149,17 @@
 }
 
 .section-header__title {
-  font-size: var(--font-size-4xl);
+  font-size: clamp(1.75rem, 3.2vw, 2.75rem);
   margin-bottom: var(--spacing-md);
   background: linear-gradient(135deg, var(--color-text) 0%, var(--color-muted) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  line-height: 1.2;
 }
 
 .section-header__subtitle {
-  font-size: var(--font-size-lg);
+  font-size: clamp(1rem, 1.8vw, 1.125rem);
   color: var(--color-muted);
   line-height: var(--line-height-relaxed);
 }

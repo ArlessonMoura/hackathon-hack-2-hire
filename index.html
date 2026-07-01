@@ -24,6 +24,19 @@
       content="Solução serverless de processamento inteligente de documentos com IA Generativa"
     />
     <meta property="og:type" content="website" />
+    <meta property="og:image" content="./app/assets/images/architecture.png" />
+    <meta property="og:image:alt" content="Diagrama de arquitetura IDP com AWS" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Leitur.AI IDP | Intelligent Document Processing com Amazon Bedrock"
+    />
+    <meta
+      name="twitter:description"
+      content="Arquitetura serverless AWS para processamento de documentos com Amazon Bedrock e Amazon Nova."
+    />
+    <meta name="twitter:image" content="./app/assets/images/architecture.png" />
+    <meta name="twitter:image:alt" content="Diagrama de arquitetura IDP com AWS" />
 
     <title>Leitur.AI IDP | Intelligent Document Processing com Amazon Bedrock</title>
 
@@ -45,8 +58,22 @@
     <link rel="stylesheet" href="./app/css/responsive.css" />
 
     <!-- External Libraries -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/aos@next/dist/aos.css"
+      integrity="sha384-6oNXtl81GMcKAnWPPXinWlPskKUQ0NGG1/XeyMfC5RgCJKPc03w0rHVt1jyoJLf0"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://unpkg.com/aos@next/dist/aos.js"
+      integrity="sha384-ZGo5k5ISlEzWLoXyt+lnvKt9j03Z7GkxXh14zLqVy098XJhcdKHjL8pQYVMI8WiH"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://unpkg.com/lucide@latest"
+      integrity="sha384-ouAVEJVCMsf8Svzn+BwqbaBhxBEA0xgeVBhHnxmWd+Wqyv18yhWCQwGegFD/OHLq"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <!-- Navigation -->
@@ -221,9 +248,8 @@
             </div>
             <h3 class="card__title">Classificação Automática</h3>
             <p class="card__description">
-              Amazon Bedrock Data Automation identifica automaticamente cada tipo de
-              documento: identidade, comprovantes, extratos, documentação imobiliária. Bem
-              como, identifica possíveis entradas maliciosas.
+              Amazon Bedrock Data Automation classifica documentos automaticamente e
+              identifica entradas fora do padrão ou possíveis inconsistências de formato.
             </p>
           </div>
 
@@ -248,8 +274,8 @@
             </div>
             <h3 class="card__title">Estruturação com Amazon Nova</h3>
             <p class="card__description">
-              Amazon Nova com tool calling gera JSON estruturado e padronizado. Dados
-              consistentes, validados e prontos para integração.
+              Amazon Nova, modelo Bedrock para normalização semântica via tool calling,
+              gera JSON estruturado e validado com regras de schema.
             </p>
           </div>
 
@@ -337,8 +363,8 @@
               <div class="pipeline__content">
                 <h3 class="pipeline__title">Upload para S3</h3>
                 <p class="pipeline__description">
-                  Arquivo ZIP enviado diretamente para bucket S3. PoliticaZero Trust,
-                  bucket de ingestão é adeus a gargalos e falta de segurança.
+                  Arquivo ZIP enviado diretamente para bucket S3. Princípios de Zero Trust
+                  reduzem o risco de upload malicioso e minimizam gargalos de ingestão.
                 </p>
               </div>
             </div>
@@ -390,8 +416,8 @@
               <div class="pipeline__content">
                 <h3 class="pipeline__title">Amazon Nova</h3>
                 <p class="pipeline__description">
-                  Modelo LLM de última geração. Este Tool calling garante JSON estruturado
-                  e validado sem parsing manual.
+                  Modelo Bedrock de ultima geração para normalização semântica via tool
+                  calling. Gera JSON estruturado e validado sem parsing manual.
                 </p>
               </div>
             </div>
@@ -569,8 +595,9 @@
             <div class="differential__content">
               <h3>Scale to Zero</h3>
               <p>
-                Infraestrutura desaparece quando não em uso. Zero custo quando idle.
-                Escala instantaneamente sob demanda.
+                Computação serverless escala até zero quando não há requisições ativas.
+                Isso reduz custos de execução, embora armazenamento e serviços gerenciados
+                permaneçam disponíveis.
               </p>
             </div>
           </div>
@@ -682,7 +709,9 @@
               <tr>
                 <td>4, 7. Computação</td>
                 <td>AWS Lambda</td>
-                <td>10.000 execuções de unzip + 10.000 de agregação</td>
+                <td>
+                  10.000 execuções de unzip + 10.000 de agregação (128MB, 0.5s media)
+                </td>
                 <td>$2,50</td>
               </tr>
               <tr>
@@ -693,14 +722,14 @@
               </tr>
               <tr>
                 <td>8. Estruturação Semântica</td>
-                <td>Amazon Bedrock (Nova Lite)</td>
+                <td>Amazon Bedrock (Nova family)</td>
                 <td>Input: 40M tokens | Output: 10M tokens (Pós-Consolidação)</td>
                 <td>$110,00</td>
               </tr>
               <tr>
                 <td>9. Persistência Final</td>
                 <td>Amazon DynamoDB</td>
-                <td>10.000 gravações/mês + Leituras (Modo On-Demand)</td>
+                <td>10.000 gravações/mês + leituras estimadas em On-Demand</td>
                 <td>$1,25</td>
               </tr>
               <tr class="finops__total-row">
@@ -770,7 +799,7 @@
               </div>
               <div class="results__data-row">
                 <span class="results__data-label">Pessoal necessário</span>
-                <span class="results__data-value">~33 funcionários</span>
+                <span class="results__data-value">~38 funcionários</span>
               </div>
               <div class="results__data-row">
                 <span class="results__data-label">Disponibilidade</span>
@@ -1020,10 +1049,11 @@
               <h3 class="team__name">Maria Beatriz</h3>
               <p class="team__role">Front-End Developer | Cloud Developer</p>
               <p class="team__bio">
-                Formada em Análise e Desenvolvimento de Sistemas, com conhecimentos em
-                Desenvolvimento Front-end e foco em Cloud Computing e Suporte de TI.
-                Possuo experiência prática em projetos utilizando AWS, Python, JavaScript,
-                HTML, CSS, Git/GitHub e APIs. Certificada AWS Cloud Practitioner.
+                Formada em Análise e Desenvolvimento de Sistemas, com foco em Frontend e
+                conhecimento em AWS, certificada AWS Cloud Practitioner . Possui
+                experiência com Next.js, Django e Streamlit (Python), além de estudos
+                aplicados em IA Generativa e integração de LLMs via MCP (Model Context
+                Protocol).
               </p>
             </div>
           </a>
@@ -1099,7 +1129,11 @@
 
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/chart.js"
+      integrity="sha384-jb8JQMbMoBUzgWatfe6COACi2ljcDdZQ2OxczGA3bGNeWe+6DChMTBJemed7ZnvJ"
+      crossorigin="anonymous"
+    ></script>
     <script src="./app/js/app.js"></script>
     <script src="./app/js/navigation.js"></script>
     <script src="./app/js/counters.js"></script>

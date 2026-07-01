@@ -953,6 +953,10 @@
   padding: var(--spacing-2xl);
   text-align: center;
   transition: all var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 320px;
 }
 
 .team__card:hover {
@@ -1004,6 +1008,10 @@
   color: var(--color-muted);
   font-size: var(--font-size-sm);
   line-height: var(--line-height-relaxed);
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Footer */
