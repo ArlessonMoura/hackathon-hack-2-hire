@@ -128,7 +128,7 @@
   align-items: center;
   justify-content: center;
   margin-right: var(--spacing-xs);
-  max-width: 12vw;
+  max-width: 260px;
 }
 
 .badge__icon {

@@ -5,9 +5,18 @@
 Está é uma landing page de apresentação da Plataforma Leitur.AI, uma solução de Intelligent Document Processing (IDP) construída com Amazon Bedrock e arquitetura serverless AWS.
 Nossa plataforma, desenvolvida durante o hackathon Hack2Hire - Escola da Nuvem/AWS, já se encontra pronta para produção. Com ela obtvemos o 3° lugar na competição e os melhores apontamentos dos jurados nos quesitos maturidade arquitetural, expertise em AWS e visão de negócios.
 
-## 🎯 Seções Principais
+## 🎯 Seções da apresentação
 
-
+- **Hero**: introdução da solução Leitur.AI com proposta de valor e chamadas para ação.
+- **O Problema**: descreve os desafios do processamento manual de documentos.
+- **Nossa Solução**: apresenta a arquitetura IDP e os principais benefícios do produto.
+- **Pipeline**: mostra o fluxo de processamento de documentos, desde upload até extração de dados.
+- **Demonstração**: exibe a solução em funcionamento e elementos visuais de prova de conceito.
+- **Arquitetura**: detalha a arquitetura serverless AWS e a integração com Bedrock.
+- **Diferenciais**: compara vantagens competitivas e abordagens de qualidade.
+- **FinOps**: destaca eficiência de custo, escalabilidade e melhor gerenciamento operacional.
+- **Resultados**: apresenta métricas, ganhos e valor entregue ao negócio.
+- **Equipe**: reconhece os membros do time e os mentores do projeto.
 
 ## 📁 Estrutura do código desta landing page
 
@@ -37,6 +46,7 @@ landing-page/
     ├── icons/              # Assets de ícones
     └── fonts/              # Arquivos de fontes
 ```
+
 ## 🛠️ Tecnologias
 
 - **HTML5**: Marcação semântica com recursos de acessibilidade
@@ -46,10 +56,6 @@ landing-page/
   - AOS (Animate On Scroll): Animações de scroll
   - Chart.js: Gráficos interativos para seções FinOps e Escalabilidade
   - Lucide: Biblioteca de ícones minimalista
-
-## 👥 Equipe
-
-Construído por uma equipe multidisciplinar de profissionais de TI, dados e cloud AWS durante o Hackathon Hack2Hire - Escola da Nuvem/AWS.
 
 ## 🙏 Agradecimentos
 
