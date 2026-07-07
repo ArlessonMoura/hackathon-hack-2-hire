@@ -125,5 +125,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // Open modal with image when clicking on social links
+  document.querySelectorAll('.footer__social-link').forEach((link) => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const modalTitle = document.getElementById('modalTitle');
+      const modalBody = document.getElementById('modalBody');
+
+      if (modalTitle && modalBody) {
+        modalTitle.textContent = 'QUEM TESTA É A VIDA';
+        modalBody.innerHTML =
+          '<img src="./app/assets/images/quem-testa-eh-a-vida.jpeg" alt="Quem Testa é a Vida" style="max-width: 100%; height: auto; border-radius: 8px;">';
+      }
+      openModal();
+    });
+  });
+
   console.log('IDP Enterprise Landing Page initialized');
 });
+
