@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     duration: 600,
     easing: 'ease-out-cubic',
     once: false,
+    mirror: true,
     offset: 50,
     delay: 0,
   });
@@ -99,8 +100,18 @@ document.addEventListener('DOMContentLoaded', () => {
     modal.setAttribute('aria-hidden', isVisible ? 'false' : 'true');
   };
 
-  const openModal = () => {
+  const openModal = (title = '', content = '') => {
     if (!modal) return;
+    const modalTitle = document.getElementById('modalTitle');
+    const modalBody = document.getElementById('modalBody');
+    
+    if (modalTitle && title) {
+      modalTitle.textContent = title;
+    }
+    if (modalBody && content) {
+      modalBody.innerHTML = content;
+    }
+    
     modal.classList.add('modal--active');
     setModalVisibility(true);
   };
@@ -129,17 +140,75 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.footer__social-link').forEach((link) => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
-      const modalTitle = document.getElementById('modalTitle');
-      const modalBody = document.getElementById('modalBody');
-
-      if (modalTitle && modalBody) {
-        modalTitle.textContent = 'QUEM TESTA É A VIDA';
-        modalBody.innerHTML =
-          '<img src="./app/assets/images/quem-testa-eh-a-vida.jpeg" alt="Quem Testa é a Vida" style="max-width: 100%; height: auto; border-radius: 8px;">';
-      }
-      openModal();
+      openModal(
+        'QUEM TESTA É A VIDA',
+        '<img src="./app/assets/images/quem-testa-eh-a-vida.jpeg" alt="Quem Testa é a Vida" style="max-width: 100%; height: auto; border-radius: 8px;">'
+      );
     });
   });
+
+  // Dynamic zoom on hover for architecture image
+  const architectureImage = document.getElementById('architectureImage');
+  if (architectureImage) {
+    const img = architectureImage.querySelector('img');
+    const zoomHint = architectureImage.querySelector('.architecture__zoom-hint');
+    
+    // Create zoom lens element
+    const zoomLens = document.createElement('div');
+    zoomLens.className = 'zoom-lens';
+    zoomLens.style.display = 'none';
+    document.body.appendChild(zoomLens);
+    
+    // Create zoom result element using background-image approach
+    const zoomResult = document.createElement('div');
+    zoomResult.className = 'zoom-result';
+    zoomResult.style.display = 'none';
+    zoomResult.style.backgroundImage = `url(${img.src})`;
+    zoomResult.style.backgroundRepeat = 'no-repeat';
+    document.body.appendChild(zoomResult);
+    
+    const zoomRatio = 5;
+    const lensSize = 100;
+    const resultSize = 400;
+    
+    architectureImage.addEventListener('mouseenter', () => {
+      zoomLens.style.display = 'block';
+      zoomResult.style.display = 'block';
+      if (zoomHint) zoomHint.style.opacity = '0';
+    });
+    
+    architectureImage.addEventListener('mouseleave', () => {
+      zoomLens.style.display = 'none';
+      zoomResult.style.display = 'none';
+      if (zoomHint) zoomHint.style.opacity = '1';
+    });
+    
+    architectureImage.addEventListener('mousemove', (e) => {
+      const imgRect = img.getBoundingClientRect();
+      
+      // Calculate cursor position relative to image
+      const x = e.clientX - imgRect.left;
+      const y = e.clientY - imgRect.top;
+      
+      // Position lens centered on cursor
+      zoomLens.style.left = (e.clientX - lensSize / 2) + 'px';
+      zoomLens.style.top = (e.clientY - lensSize / 2) + 'px';
+      
+      // Calculate background position for zoom result
+      // The background position should be negative of the cursor position multiplied by zoom ratio
+      // Plus half the result size to center the zoomed area
+      const bgX = -(x * zoomRatio - resultSize / 2);
+      const bgY = -(y * zoomRatio - resultSize / 2);
+      
+      // Set background size to image size * zoom ratio
+      zoomResult.style.backgroundSize = `${imgRect.width * zoomRatio}px ${imgRect.height * zoomRatio}px`;
+      zoomResult.style.backgroundPosition = `${bgX}px ${bgY}px`;
+      
+      // Position result box near cursor
+      zoomResult.style.left = (e.clientX + 20) + 'px';
+      zoomResult.style.top = (e.clientY + 20) + 'px';
+    });
+  }
 
   console.log('IDP Enterprise Landing Page initialized');
 });
