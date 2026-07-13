@@ -1,17 +1,21 @@
 // Main Application Entry Point
 document.addEventListener('DOMContentLoaded', () => {
-  // Initialize Lucide icons
-  lucide.createIcons();
+  // Initialize AOS first — scroll-reveal elements stay invisible until this runs
+  if (typeof AOS !== 'undefined') {
+    AOS.init({
+      duration: 600,
+      easing: 'ease-out-cubic',
+      once: false,
+      mirror: true,
+      offset: 50,
+      delay: 0,
+    });
+  }
 
-  // Initialize AOS (Animate On Scroll)
-  AOS.init({
-    duration: 600,
-    easing: 'ease-out-cubic',
-    once: false,
-    mirror: true,
-    offset: 50,
-    delay: 0,
-  });
+  // Initialize Lucide icons (non-blocking for scroll animations)
+  if (typeof lucide !== 'undefined') {
+    lucide.createIcons();
+  }
 
   // Smooth scroll for navigation links
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -78,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Performance: Preload critical resources
   const criticalResources = [
-    'https://unpkg.com/lucide@latest',
+    'https://unpkg.com/lucide@1.23.0/dist/umd/lucide.min.js',
     'https://unpkg.com/aos@next/dist/aos.css',
   ];
 
